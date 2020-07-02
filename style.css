@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* displays next slides off screen without having a horizontal scrollbar */
+  background: black;
+}
+
+header {
+  text-align: center;
+  background: black;
+  box-shadow: 0 .5em 1em #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+}
+
+header label {
+  color: palevioletred;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 1em;
+  font-family: 'Righteous', cursive;
+}
+
+header label:hover {
+  color: white;
+}
+
+.slide {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%; /* pushing slides off to the side so cannot be seen until clicked */
+  z-index: 10;
+  background: black;
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: left 0s .75s;
+}
+
+.slide-one {
+background-image: url('img/yawn1.jpeg');
+}
+
+.slide-two {
+background-image: url('img/yawn2.jpeg');
+}
+
+.slide-three {
+background-image: url('img/yawn3.jpeg');
+}
+
+.slide-four {
+background-image: url('img/yawn4.jpeg');
+}
+
+.slide-five {
+background-image: url('img/yawn5.jpeg');
+}
+
+.slide-six {
+background-image: url('img/yawn6.jpeg');
+}
+
+.slide-seven {
+background-image: url('img/yawn7.jpeg');
+}
+
+.slide-eight {
+background-image: url('img/yawn8.jpeg');
+}
+
+.slide-nine {
+background-image: url('img/yawn9.jpeg');
+}
+
+.slide-ten {
+background-image: url('img/yawn10.jpeg');
+}
+
+.slide-eleven {
+background-image: url('img/yawn11.jpeg');
+}
+
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100; /* brings the slide back into view when radio button checked */
+  transition: left .65s ease-out;
+}
+
+
+[id^="slide"]:checked {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s .5s;
+}
