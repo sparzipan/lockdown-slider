@@ -33,7 +33,7 @@ header label {
   color: palevioletred;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 1em;
   font-family: 'Righteous', cursive;
 }
@@ -43,15 +43,16 @@ header label:hover {
 }
 
 .slide {
-  width: 50%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 100%; /* pushing slides off to the side so cannot be seen until clicked */
   z-index: 10;
-  background: black;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   transition: left 0s .75s;
 }
 
